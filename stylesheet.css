@@ -1,0 +1,386 @@
+ul {
+    list-style-type: none;
+}
+
+/*-------GENERAL TEXT RULES -------*/
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+/*----------- NAV RULES ----------*/
+nav {
+    height: 3em;
+    line-height: 2.3em;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 600;
+    display: inline-block;
+    width: 100%;
+    background: #FEA887, rgba(254,168,135,0.55);
+    border: 0;
+    font-family: 'Roboto Slab',serif;
+    text-transform: uppercase;
+    text-align: center;
+    text-decoration: none;
+/* Next line prevents links from jumping to wrong place in
+ chrome and Safari*/
+    transform:-webkit-transform: translateZ(0);
+    transform: -moz-transform: translateZ(0);
+    transform: -ms-transform: translateZ(0);
+    transform: -o-transform; translateZ(0);
+}
+
+nav.nav_closed {
+    overflow: hidden;
+}
+
+/* MENU button rules*/
+a #menu {
+    float: right;
+    border: 1px solid #BCC6CC;
+    color: #BCC6CC;
+    width: 4em;
+    margin-top: 5px;
+    margin-right: 15px;
+    font-weight: 300;
+    text-align: center;
+    margin-bottom: 6px;
+}
+
+a #menu:hover {
+    background: #FEA887, rgba(254,168,135,0.55);
+    color: #BCC6CC;
+    font-weight: 600;
+}
+
+/*#navlist*/
+ul #navlist {
+    clear: right;
+    list-style: none;
+    font-weight: 300;
+}
+
+nav.nav_closed ul #navlist {
+    display: none;
+}
+
+nav.nav_open {
+    overflow: visible;
+    background: #FEA887, rgba(254,168,135,0.55);
+}
+
+nav.nav_open ul #navlist {
+    display: block;
+    background: #FEA887, rgba(254,168,135,0.55);
+}
+
+nav.nav_open a #menu {
+    background: rgba(254,168,135,0.55);
+    color: #BCC6CC;
+}
+
+nav ul #navlist li a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-top: 1px #ccc solid;
+    color: #BCC6CC;
+    text-decoration: none;
+}
+
+nav ul #navlist li a:hover {
+    background: #FEA887, rgba(254,168,135,0.55);
+    color: #BCC6CC;
+    text-decoration: none;
+}
+
+/*-------NOSCRIPT STYLES -------*/
+#mainnav {
+    padding-top: 4em;
+}
+
+#mainnav li {
+    width: 100%;
+    text-align: center;
+    height: 2.5em;
+    line-height: 2.5em;
+    border-top: 1px #ccc solid;
+}
+
+noscript p {
+    text-align: center;
+    margin: 1em auto;
+    width: 80%;
+}
+
+/*-------SECTION RULES -------*/
+/* section.page-content*/
+section.page-content {
+    clear: both;
+}
+
+/*special PAGE-CONTENT rules*/
+section.page-content div {
+    width: 100%;
+    max-width: 1024px;
+    margin: auto;
+    padding-top: 2em;
+    padding-bottom: 4em;
+/*ensures h1s clear the
+   persistent navbar at top*/
+}
+
+/* ----section#page-header rules---*/
+section #page-header {
+    height: 100vh;
+/*vh is "viewpoint height"*/
+    width: 100%;
+    background: #fff url(colorCode.jpg) no-repeat center center;
+    background-size: cover;
+    color: #000;
+    display: table;
+/*IMPORTANT: sets parent container to behave like
+ a table*/
+}
+
+section #page-header header {
+    width: 100%;
+    text-align: center;
+    display: table-cell;
+/*IMPORTANT: sets child to display like table
+  cell for verticle centering*/
+    verticle-align: middle;
+/*IMPORTANT: vertically centers text in
+ "table cell" regardless of    parent resizing.*/
+}
+
+section #page-header h1 {
+    font: 2.3em/2'Roboto Slab',serif;
+    font-weight: 300;
+    padding-top: 4.25em;
+    color: #BCC6CC;
+    vertical-align: middle;
+    text-decoration: overline;
+    text-transform: uppercase;
+}
+
+section #page-header h2 {
+    font: 1.5em'Roboto Slab',serif;
+    font-weight: 300;
+    text-align: center;
+    text-decoration: underline;
+    color: #BCC6CC;
+}
+
+/*special PROFILE rules */
+section #profile {
+    background: #ccc url(/Users/codeHer/Documents/Workstation/Re_Re_Resume_Project/Images/Background.jpg) no-repeat center center;
+    background-size: cover;
+    color: #BCC6CC;
+    min-height: 100%;
+    min-width: 1024px;
+    width: 100%;
+    height: auto;
+    top: 0;
+    left: 0;
+    padding-top: 2em;
+    padding-bottom: 4em;
+}
+
+.about-me h1 {
+    font-family: 'Roboto Slab',serif;
+    font-size: 2em;
+    font-weight: 700;
+    color: #BCC6CC;
+    text-transform: uppercase;
+}
+
+.about-me h2 {
+    font-family: 'Roboto Slab',serif;
+    font-size: 1.35em;
+    font-weight: 700;
+    padding-bottom: 1em;
+    color: #BCC6CC;
+}
+
+.about-me p {
+    font: 4em 'Roboto Slab',serif;
+    font-weight: 400;
+    font-size: 100%;
+    margin: auto;
+    font-style: bold;
+}
+
+.about-me a[href^="mailto:"]:hover:after {
+    font-family: 'Roboto Slab',serif;
+    color: blue;
+    font-size: 4em;
+}
+
+/*special HIGHLIGHTS rules */
+section #highlights {
+    background: #ccc url(cubeColor.jpg) no-repeat bottom center;
+    background-size: cover;
+    color: #BCC6CC;
+    min-height: 100%;
+    min-width: 1024px;
+    width: 100%;
+    height: auto;
+    top: 0;
+    left: 0;
+    padding-top: 2em;
+    padding-bottom: 4em;
+}
+
+.outcomes h1 {
+    font-family: 'Roboto Slab',serif;
+    font-size: 2em;
+    font-weight: 700;
+    color: #BCC6CC;
+    text-transform: uppercase;
+}
+
+.outcomes h2 {
+    font-family: 'Roboto Slab',serif;
+    font-size: 1.35em;
+    font-weight: 700;
+    padding-bottom: 1em;
+    color: #BCC6CC;
+}
+
+.outcomes ul li:before {
+    content: "\2605";
+}
+
+.outcomes p {
+    font: 4em 'Roboto Slab',serif;
+    font-weight: 700;
+    font-size: 100%;
+    margin: auto;
+    font-style: bold;
+}
+
+/*special EDUCATION rules */
+section #education {
+    background: #ccc url(Background.jpg) no-repeat bottom center;
+    background-size: cover;
+    color: #BCC6CC;
+    min-height: 100%;
+    min-width: 1024px;
+    width: 100%;
+    height: auto;
+    top: 0;
+    left: 0;
+    padding-top: 2em;
+    padding-bottom: 4em;
+}
+
+.degree h1 {
+    font-family: 'Roboto Slab',serif;
+    font-size: 2em;
+    font-weight: 700;
+    color: #BCC6CC;
+    text-transform: uppercase;
+}
+
+.degree h2 {
+    font-family: 'Roboto Slab',serif;
+    font-size: 1.35em;
+    font-weight: 700;
+    padding-bottom: 1em;
+    color: #BCC6CC;
+}
+
+.degree article dt {
+    font-weight: 700;
+}
+
+.degree article dd {
+    font-weight: 700;
+    font-style: bold;
+}
+
+/*special EXPERIENCE rules */
+section #experience {
+    background: #ccc url(cubeColor.jpg) no-repeat center center;
+    background-size: cover;
+    color: #BCC6CC;
+    min-height: 100%;
+    min-width: 1024px;
+    width: 100%;
+    height: auto;
+    top: 0;
+    left: 0;
+    padding-top: 2em;
+    padding-bottom: 4em;
+    overflow: hidden;
+}
+
+.employment-snapshot h1 {
+    font-family: 'Roboto Slab',serif;
+    font-size: 2em;
+    font-weight: 700;
+    color: #BCC6CC;
+    text-transform: uppercase;
+}
+
+.employment-snapshot h2 {
+    font-family: 'Roboto Slab',serif;
+    font-size: 1.35em;
+    font-weight: 700;
+    padding-bottom: 1em;
+    color: #BCC6CC;
+}
+
+.employment-snapshot p {
+    font: 4em 'Roboto Slab',serif;
+    font-weight: 400;
+    font-size: 100%;
+    margin: auto;
+    font-style: bold;
+}
+
+/*special SKILLS rules */
+section #skills {
+    background: #ccc url(Background.jpg) no-repeat bottom center;
+    background-size: cover;
+    color: #BCC6CC;
+    min-height: 100%;
+    min-width: 1024px;
+    width: 100%;
+    height: auto;
+    top: 0;
+    left: 0;
+    padding-top: 2em;
+    padding-bottom: 4em;
+}
+
+section #skills h1 {
+    font-family: 'Roboto Slab',serif;
+    font-size: 2em;
+    font-weight: 700;
+    color: #BCC6CC;
+    text-transform: uppercase;
+}
+
+section #skills h2 {
+    font-family: 'Roboto Slab',serif;
+    font-size: 1.35em;
+    font-weight: 700;
+    padding-bottom: 1em;
+    color: #BCC6CC;
+}
+
+section #skills ul li {
+    font: 2em 'Roboto Slab',serif;
+    font-weight: 300;
+    font-size: 100%;
+    margin: auto;
+    font-style: bold;
+    padding-top: 4em;
+}
